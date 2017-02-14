@@ -43,8 +43,9 @@ public class StationsController {
                                             @RequestParam(value = "lng", required = true) Double lng,
                                             @RequestParam(value = "radius", required = true) Integer radius
     ) {
-
-        return stationsService.getNearestStations(lat, lng, radius);
+        return stationsService.getStationsByCity(1l);
+        //TODO MAKE IT WORK
+//        return stationsService.getNearestStations(lat, lng, radius);
     }
 
     @RequestMapping(value = "/{stationId}/take", method = RequestMethod.POST)

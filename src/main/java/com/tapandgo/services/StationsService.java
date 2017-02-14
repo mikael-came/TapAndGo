@@ -111,12 +111,12 @@ public class StationsService {
         if (idCity != null) {
 
             stations.addAll(stationRepository.findByCity(idCity));
-
-//                   final Pageable pageableRequest = new PageRequest(0, 2);
-//                    Query query = new Query();
-//                    query.addCriteria(Criteria.where("city.id").is(idCity));
-//                    query.with(pageableRequest);
-//                return mongoTemplate.find(query, Station.class);
+    //TODO pagination REQUEST with mongo
+    //                   final Pageable pageableRequest = new PageRequest(0, 2);
+    //                    Query query = new Query();
+    //                    query.addCriteria(Criteria.where("city.id").is(idCity));
+    //                    query.with(pageableRequest);
+    //                return mongoTemplate.find(query, Station.class);
         }
 
         return stations;

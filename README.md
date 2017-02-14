@@ -2,12 +2,12 @@
 
 ## Prerequis
 
-Il est nécessaire pour le fonctionnemnt de l'application de fournir une base de donnée Mongo.
+Il est nécessaire pour le fonctionnment de l'application de fournir une base de donnée Mongo.
 https://docs.mongodb.com/manual/installation/
-La base de donénes est initialisé au chargement de l'application
+La base de donénes est initialisé au chargement de l'application.
     
-pour Linux  
-    
+Commande de démarrage Mongo pour Linux  
+   
     `service mongod start`
 
 
