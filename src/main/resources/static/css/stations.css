@@ -1,0 +1,20 @@
+
+.Station{
+    padding: 5px 5px;
+    List-style-type: none;
+ }
+
+.Station:not(:last-child) {
+    border-bottom: 1px solid #eea3ac;
+}
+
+
+.Station > p {
+    font-family: "DINMedium", arial, sans-serif;
+    margin:0px
+}
+
+.Cities{
+  width : 400px ;
+  background-color: white;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tap and Go</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<div class="Cities">
+    <p class="City_title">City : </p>
+
+    <div class="City">
+        <p> Name : <span th:text="${city.name}"/></p>
+        <p> Latitude : <span th:text="${city.latitude}"/></p>
+        <p> Longitude : <span th:text="${city.longitude}"/></p>
+    </div>
+</div>
+<div class="Stations">
+    <p class="City_title">Stations: </p>
+    <ul>
+        <li class="Station" th:each="station : ${stations}">
+            <p> Name : <span th:text="${station.name}"/></p>
+            <p> address : <span th:text="${station.address}"/></p>
+            <p> description : <span th:text="${station.description}"/></p>
+            <p> latitude : <span th:text="${station.latitude}"/></p>
+            <p> longitude : <span th:text="${station.longitude}"/></p>
+            <p> bikesCapacities : <span th:text="${station.latitude}"/></p>
+            <p> bikesAvailable : <span th:text="${station.bikesAvailable}"/></p>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>

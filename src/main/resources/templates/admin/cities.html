@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tap and Go</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<div class="Cities">
+    <p class="City_title">Cities Available : </p>
+    <ul>
+        <li class="City" th:each="city : ${cities}">
+            <p> Name : <span th:text="${city.name}"/></p>
+            <p> Latitude : <span th:text="${city.latitude}"/></p>
+            <p> Longitude : <span th:text="${city.longitude}"/></p>
+            <p><a th:href="@{admin/cities/{id}(id=${city.id})}">see stations</a></p>
+        </li>
+    </ul>
+</div>
+
+<div class="cityForm">
+    <p class="City_title"> Add a city :</p>
+    <form action="#" th:action="@{admin/cities}" th:object="${city}" method="post">
+        <p>Id : <input type="text" th:field="*{id}"/></p>
+        <p>Name : <input type="text" th:field="*{name}"/></p>
+        <p>Latitude : <input type="text" th:field="*{latitude}"/></p>
+        <p>Longitude : <input type="text" th:field="*{longitude}"/></p>
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+</body>
+</html>

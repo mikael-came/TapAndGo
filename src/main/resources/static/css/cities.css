@@ -1,0 +1,40 @@
+.City_title {
+    min-height: 40px;
+    line-height: 65px;
+    display: block;
+    border-bottom: 1px solid #d0021b;
+    font-family: "DINCondensed";
+    font-size: 30px;
+    color: #d0021b;
+    margin: 0 20px;
+}
+.City{
+    padding: 5px 5px;
+    List-style-type: none;
+ }
+
+.City:not(:last-child) {
+    border-bottom: 1px solid #eea3ac;
+}
+
+
+.City > p {
+    font-family: "DINMedium", arial, sans-serif;
+    margin:5px
+}
+.Cities{
+  width : 400px ;
+  background-color: white;
+}
+.cityForm >form > p {
+    font-family: "DINMedium", arial, sans-serif;
+    margin:5px
+}
+.cityForm form  {
+
+    padding-left :40px
+}
+
+div.City{
+    padding-left:40px
+}
