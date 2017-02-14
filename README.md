@@ -28,12 +28,8 @@ pour Linux
     
 
 ## Identifiant de connexion
+
 Role Administateur : admin/admin
 
 Role User : user/user
  
- ## Quick run du JAR (non testé)
- Le jar compilé suivant, permet de runner l'application (jar embarqué): /build/libs/bikeapp-0.0.1-SNAPSHOT.jar
- Pour le lancer jouer la commande suivant :
- 
-      java -jar build/libs/bikeapp-0.0.1-SNAPSHOT.jar
