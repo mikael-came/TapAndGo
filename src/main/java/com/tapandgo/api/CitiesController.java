@@ -3,12 +3,17 @@ package com.tapandgo.api;
 import com.tapandgo.data.City;
 import com.tapandgo.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.thymeleaf.expression.Lists;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,12 +31,12 @@ public class CitiesController {
                                    @RequestParam(value = "limit", required = false, defaultValue = "10") Integer limit) {
 
 
-        List<City> all = cityRepository.findAll();
+        //List<City> all = cityRepository.findAll();
+        Pageable pageable = new PageRequest(page, limit);
+        Page<City> currentPage = cityRepository.findAll(pageable);
+        return currentPage.getContent();
 
-        //TODO : Gestion pagination à implementer dans un service
-        //        final Pageable pageableRequest = new PageRequest(0, 2);
-        //        Query query = new Query();
-        //        query.with(pageableRequest);
-        return all;
+
+
     }
 }
